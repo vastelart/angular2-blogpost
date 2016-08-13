@@ -1,0 +1,18 @@
+<section id="addNewPostSection" class="add-new-post-section">
+    <div class="content">
+        <button id="newPost" class="new-post" (click)="showHideFormAction()">Add a new post</button>
+    </div>
+    <div class="content" *ngIf="showHideForm">
+
+        <form id="newPostForm" class="new-post-form" [ngClass]="{disabled: formDisabled}" (ngSubmit)="onSubmit()" #PostForm="ngForm">
+
+            <input type="text" name="title" [(ngModel)]="model.title" id="postFormTitle" class="post-form-title" placeholder="Title" required>
+
+            <textarea name="body" [(ngModel)]="model.body" id="postFormBody" cols="30" rows="10" class="post-form-body" placeholder="Body" required></textarea>
+
+            <button id="postFormSubmit" class="post-form-submit" type="submit">Submit</button>
+            <small [ngClass]="{green: resultStatus, red: !resultStatus}">{{ resultMessage }}</small>
+        </form>
+
+    </div>
+</section>

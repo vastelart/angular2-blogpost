@@ -1,0 +1,17 @@
+<div class="post">
+
+    <h2 class="post-title">{{ post.title }}</h2>
+
+    <div class="post-body">
+        <p>{{ post.body }}</p>
+    </div>
+
+    <div class="post-comments">
+
+        <new-comment [post]="post"></new-comment>
+
+        <h4>Recent comments</h4>
+        <comment [postId]="post.id"></comment>
+    </div>
+
+</div>

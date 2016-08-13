@@ -1,0 +1,53 @@
+lightGreyColor = #ccc
+borderSet = 1px solid alpha(lightGreyColor, .5)
+
+html
+body
+	padding 0
+	margin 0
+
+.loading
+	&:after
+		display block
+		content ""
+		position absolute
+		left 0
+		right 0
+		top 0
+		bottom 0
+		z-index 20
+		background white url("/i/ajax-loader.gif") no-repeat center
+
+body
+	font-size 16px
+	font-family sans-serif
+	position relative
+	z-index 15
+
+.red
+	color red
+
+.green
+	color green
+
+.header
+	padding 15px
+	border-bottom borderSet
+
+.content
+	max-width 1024
+	min-width 320px
+	padding 15px
+	margin 0 auto
+	box-sizing border-box
+
+.disabled
+	opacity .5
+	pointer-events none
+
+@import "../app/components/header/header.stylesheets"
+@import "../app/components/newPost/newPost.stylesheets"
+@import "../app/components/post/post.stylesheets"
+@import "../app/components/comment/comment.stylesheet"
+@import "../app/components/newComment/newComment.stylesheets"
+@import "../app/components/postlist/postlist.stylesheet"

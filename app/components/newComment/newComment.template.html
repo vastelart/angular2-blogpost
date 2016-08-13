@@ -1,0 +1,10 @@
+<form id="commentForm" [ngClass]="{disabled: commentFormDisabled}" class="comment-form" (ngSubmit)="submitComment(post.id)" #commentForm="ngForm">
+
+    <input type="text" name="email" [(ngModel)]="commentModel.email" class="new-comment-author" placeholder="email" required>
+
+    <textarea name="body" [(ngModel)]="commentModel.body" id="newComment" class="new-comment" cols="100" rows="4" placeholder="Type a new comment" required></textarea>
+
+    <button type="submit">Submit</button>
+    <small [ngClass]="{ green: resultStatus, red: !resultStatus }">{{ resultMessage }}</small>
+
+</form>
