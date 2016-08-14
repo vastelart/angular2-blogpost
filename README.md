@@ -5,4 +5,4 @@
 
 ## Local env
 * `git clone`
-* `npm i && npm run start` — istall dependencies, typings, start local server and .ts watchers
+* `npm i && npm run start` — install dependencies, typings, start local server and .ts watchers
